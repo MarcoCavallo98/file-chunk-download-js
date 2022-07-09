@@ -12,22 +12,22 @@ async function downloadFile(fileName) {
 
     // A bit of input valdation
     if (!fileName) {
-        document.getElementById("statusLabel").innerText = "fileName parameter is required";
+        document.getElementById('statusLabel').innerText = 'fileName parameter is required';
     }
 
     // showSaveFilePicker is only supported in Chrome and Edge (see https://developer.mozilla.org/en-US/docs/Web/API/Window/showSaveFilePicker#browser_compatibility)
     if (!window.showSaveFilePicker) {
-        document.getElementById("statusLabel").innerText = "For using this test you must use Chrome or Edge";
+        document.getElementById('statusLabel').innerText = 'For using this test you must use Chrome or Edge';
     }
 
     // Open the modal window for letting the user choose the new file's name and destination
     const handle = await window.showSaveFilePicker({
         suggestedName: fileName
-    }).catch(e => console.log("The user closed the SaveFilePicker")); // If the user closes the window without choosing, an Error is thrown. Catch the error and then check if handle has a value
+    }).catch(e => console.log('The user closed the SaveFilePicker')); // If the user closes the window without choosing, an Error is thrown. Catch the error and then check if handle has a value
 
     if (!handle) return;
 
-    document.getElementById("statusLabel").innerText = "Download in progress";
+    document.getElementById('statusLabel').innerText = 'Download in progress';
 
     // Set some variables that we'll use for performing the calls
     let offset = 0;
@@ -104,10 +104,10 @@ async function downloadFile(fileName) {
             }
         }
 
-        document.getElementById("statusLabel").innerText = "Download Completed";
+        document.getElementById('statusLabel').innerText = 'Download Completed';
 
     } catch (err) {
-        document.getElementById("statusLabel").innerText = err; // Just for testing purposes
+        document.getElementById('statusLabel').innerText = err; // Just for testing purposes
         writable.truncate(0); // An error occured: we can't delete the file (we should ask the usere to select it again ... Not so good), so we can empty it
     } finally {
         writable.close(); // This call is really important. Without this the temporary file won't be deleted and the file will left opened
@@ -128,7 +128,7 @@ function ComputeNextRequestChunkSize(processDuration, currentChunkSize) {
 function base64DecToArr(sBase64, nBlocksSize) {
 
     var
-        sB64Enc = sBase64.replace(/[^A-Za-z0-9\+\/]/g, ""), nInLen = sB64Enc.length,
+        sB64Enc = sBase64.replace(/[^A-Za-z0-9\+\/]/g, ''), nInLen = sB64Enc.length,
         nOutLen = nBlocksSize ? Math.ceil((nInLen * 3 + 1 >> 2) / nBlocksSize) * nBlocksSize : nInLen * 3 + 1 >> 2, taBytes = new Uint8Array(nOutLen);
 
     for (var nMod3, nMod4, nUint24 = 0, nOutIdx = 0, nInIdx = 0; nInIdx < nInLen; nInIdx++) {
