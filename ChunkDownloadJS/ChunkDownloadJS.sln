@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32228.430
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChunkDownloadJS", "ChunkDownloadJS\ChunkDownloadJS.csproj", "{A392529E-0245-4B3B-A659-9C7FBBCFFE97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{000DF4F4-56F8-403C-9065-33508936B795}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A392529E-0245-4B3B-A659-9C7FBBCFFE97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A392529E-0245-4B3B-A659-9C7FBBCFFE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A392529E-0245-4B3B-A659-9C7FBBCFFE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A392529E-0245-4B3B-A659-9C7FBBCFFE97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F716D3EA-AF2C-4FBF-A89C-4BF3A0DCAC95}
+	EndGlobalSection
+EndGlobal
